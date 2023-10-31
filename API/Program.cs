@@ -1,4 +1,5 @@
 using System.Text;
+using API;
 using API.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -34,6 +35,8 @@ app.UseCors(builder => builder.AllowAnyHeader()
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapControllers();
 
