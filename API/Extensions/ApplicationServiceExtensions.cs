@@ -12,6 +12,7 @@ namespace API.Extensions
         {
 
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddDbContext<DataContext>(opt =>
             {
