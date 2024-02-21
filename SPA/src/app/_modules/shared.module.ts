@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -11,12 +12,16 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     CommonModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxSpinnerModule.forRoot({
+      type: 'ball-spin-clockwise',
+    })
   ],
   exports: [
     BsDropdownModule,
     TabsModule,
-    ToastrModule
+    ToastrModule,
+    NgxSpinnerModule
   ]
 })
 export class SharedModule { }
